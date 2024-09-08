@@ -1,5 +1,10 @@
 $main-font: 'Poppins';
+$sub-font: 'Open Sans';
 
 * {
     font-family: $main-font;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }

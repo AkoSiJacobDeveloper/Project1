@@ -20,9 +20,12 @@ export default {
     return {
       links: [
         { href: '#home', text: 'Home' },
-        { href: '#about', text: 'About' },
-        { href: '#services', text: 'Services' },
-        { href: '#contact', text: 'Contact' },
+        { href: '#restaurant', text: 'Restaurants' },
+        { href: '#menu', text: 'Menu' },
+        { href: '#offers', text: 'Offers' },
+        { href: '#trackOrder', text: 'Track Order' },
+        { href: '#cart', text: 'Cart' },
+        { href: '#profile', text: 'Profile' },
       ],
     };
   },
@@ -34,10 +37,10 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  width: 190px;
+  width: 50%;
   height: 100%;
-  background-color: #000;
   color: #fff;
+  background-color:#6C7A39;
   padding: 20px;
   display: flex;
   justify-content: center;
