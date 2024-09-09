@@ -4,7 +4,7 @@
             <h2 class="heading fw-bold text-center my-5">Getting Started with QuickBite</h2>
             <div class="row d-flex justify-content-center align-items-center">
                 <div v-for="(step, index) in steps" :key="index" class="steps-container m-2 col-12 col-md-6 d-flex justify-content-center flex-column text-center text-white p-4 p-md-4 p-lg-5">
-                    <div class="container-md">
+                    <div class="container">
                         <img class="step-image my-4" :src="step.image" :alt="step.title" />
                     </div>
                     <h3 class="steps-header fw-bold text-center">{{ index + 1 }}. {{ step.title }}</h3>

@@ -18,6 +18,28 @@
     </section>
 </template>
 
+<script>
+import { ref } from 'vue';
+
+export default {
+  directives: {
+    intersect: require('@/directives/intersectionObserver').default, // import your custom directive
+  },
+  setup() {
+    const isVisible = ref(false); // state to track visibility
+
+    const handleIntersect = (entry) => {
+      isVisible.value = entry.isIntersecting; // set visibility state when the section is visible
+    };
+
+    return {
+      isVisible,
+      handleIntersect,
+    };
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 @import '@/assets/Styles/Styles.scss';
 

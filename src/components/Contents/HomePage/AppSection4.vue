@@ -60,6 +60,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/Styles/Styles.scss';
 %join-button {
     border: none;
     background: none;
@@ -74,6 +75,11 @@ export default {
     box-sizing: border-box;
     div {
         div {
+            .headline-container {
+                .headline-text {
+                   font-family: $sub-font;
+                }
+            }
             .form-container {
                 box-sizing: border-box;
 
