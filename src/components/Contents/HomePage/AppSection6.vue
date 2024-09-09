@@ -3,11 +3,8 @@
         <div class="container-fluid">
             <h2 class="heading fw-bold text-center my-5">Popular Dish Right Now</h2>
             <div class="row d-flex justify-content-center align-items-center">
-                <div v-for="(dish, index) in dishes" :key="index" class="dish-container m-2 col-12 col-md-6 d-flex justify-content-center flex-column text-center text-white p-4 p-md-4 p-lg-5">
-                    <div class="container">
-                        <img class="dish-image my-4" :src="dish.image" :alt="dish.title" />
-                    </div>
-                    <h3 class="dish-heading fw-bold text-center">{{ dish.title }}</h3>
+                <div v-for="(step, index) in steps" :key="index" class="dish-container m-2 col-12 col-md-6 d-flex justify-content-center">
+                    <img class="dish-image my-4" :src="step.image" :alt="step.title" />
                 </div>
             </div>
         </div>
@@ -15,87 +12,52 @@
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
-
-export default defineComponent ({
-    setup() {
-        const dishes = ref ([
-            {
-                title: 'Bicol Express',
-                image: require('@/assets/Images/BicolExpress.jpg')
-            },
-            {
-                title: 'Chicken Mami',
-                image: require('@/assets/Images/ChickenMami.jpg')
-            },
-            {
-                title: 'Crunchy Pork Belly',
-                image: require('@/assets/Images/CrunchyPorkBelly.jpg')
-            },
-            {
-                title: 'Dhansak Curry',
-                image: require('@/assets/Images/DhansakCurry.jpg')
-            },
-            {
-                title: 'Kare Kare',
-                image: require('@/assets/Images/Karekare.jpg')
-            },
-            {
-                title: 'Palabok',
-                image: require('@/assets/Images/Palabok.jpg')
-            },
-            {
-                title: 'Adobo Beef',
-                image: require('@/assets/Images/PinoyAdoboBeefRibs.jpg')
-            },
-            {
-                title: 'Salmon Fillet',
-                image: require('@/assets/Images/SalmonFillet.jpg')
-            },
-            {
-                title: 'Shrimps with Butter and Garlic',
-                image: require('@/assets/Images/ShrimpswithButterandGarlic.jpg')
-            },
-            {
-                title: 'Sisig',
-                image: require('@/assets/Images/Sisig.jpg')
-            },
-        ]);
-
+export default {
+    data() {
         return {
-            dishes,
-        }
-    }
-    
-})
+            steps: [
+                { image: require('@/assets/Images/1.jpg') },
+                { image: require('@/assets/Images/2.jpg') },
+                { image: require('@/assets/Images/3.jpg') },
+                { image: require('@/assets/Images/4.jpg') },
+                { image: require('@/assets/Images/5.jpg') },
+                { image: require('@/assets/Images/6.jpg') },
+                { image: require('@/assets/Images/7.jpg') },
+                { image: require('@/assets/Images/8.jpg') },
+                { image: require('@/assets/Images/9.jpg') },
+                { image: require('@/assets/Images/10.jpg')},
+                { image: require('@/assets/Images/11.jpg') },
+                { image: require('@/assets/Images/12.jpg')},
+            ],
+        };
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/Styles/Styles.scss';
-
 .main-container {
     box-sizing: border-box;
     div {
         div {
             .dish-container {
-                width: 18.75rem;
-                height: 25rem;
-                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-                border-radius: 5px;
-                background-color: #9CAD8C;
+                width: 21.875rem;
+                height: 28.125rem;
+                padding: 0;
+                
+                .dish-image {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 5px;
+                    transition: 0.5s ease-in-out;
 
-                div {
-                    .dish-image {
-                        width: 100%;
-                        border-radius: 5px;
+                    &:hover {
+                        transform: translateY(-10px);
                     }
-                }
-
-                .dish-heading {
-                    font-family: $sub-font;
                 }
             }
         }
     }
 }
+
 </style>

@@ -37,5 +37,6 @@ export default defineComponent({
 header {
   background-color:#4E5340;
   position: fixed;
+  z-index: 1;
 }
 </style>

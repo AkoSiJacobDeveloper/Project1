@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header title="My Task Management App" @toggle-sidebar="toggleSidebar" />
-    <main class="py-2">
+    <main class="py-3">
         <!-- <Sidebar :isVisible="isSidebarVisible" /> -->
         <AppSection1 />
         <AppSection2 />
