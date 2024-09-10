@@ -4,7 +4,7 @@
             <h2 class="heading fw-bold text-center my-5">Popular Dish Right Now</h2>
             <div class="row d-flex justify-content-center align-items-center">
                 <div v-for="(step, index) in steps" :key="index" class="dish-container m-2 col-12 col-md-6 d-flex justify-content-center">
-                    <img class="dish-image my-4" :src="step.image" :alt="step.title" />
+                    <img class="dish-image" :src="step.image" :alt="step.title" />
                 </div>
             </div>
         </div>
