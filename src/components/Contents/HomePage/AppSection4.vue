@@ -61,15 +61,6 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/Styles/Styles.scss';
-%join-button {
-    border: none;
-    background: none;
-    padding: 15px;
-    background-color: #D68B57;
-    color: #fff;
-    width: 100%;
-    border-radius: 5px;
-}
 
 .main-container {
     box-sizing: border-box;

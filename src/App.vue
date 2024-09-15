@@ -10,7 +10,11 @@
         <AppSection5 />
         <AppSection6 />
         <AppSection7 />
+        <AppSection8 />
     </main>
+    <footer>
+      <AppFooter />
+    </footer>
   </div>
 </template>
 
@@ -24,9 +28,11 @@ import AppSection4 from './components/Contents/HomePage/AppSection4.vue';
 import AppSection5 from './components/Contents/HomePage/AppSection5.vue';
 import AppSection6 from './components/Contents/HomePage/AppSection6.vue';
 import AppSection7 from './components/Contents/HomePage/AppSection7.vue';
+import AppSection8 from './components/Contents/HomePage/AppSection8.vue';
+import AppFooter from './components/Footer/AppFooter.vue';
 
 export default {
-  components: { Header, AppSection1, AppSection2, AppSection3, AppSection4, AppSection5, AppSection6, AppSection7 },
+  components: { Header, AppSection1, AppSection2, AppSection3, AppSection4, AppSection5, AppSection6, AppSection7, AppSection8, AppFooter },
   data() {
     return {
       isSidebarVisible: false,
