@@ -21,14 +21,14 @@
 <script>
 import Header from './components/Header/AppHeader.vue';
 // import Sidebar from './components/Sidebar/AppSidebar.vue';
-import AppSection1 from './components/Contents/HomePage/AppSection1.vue';
-import AppSection2 from './components/Contents/HomePage/AppSection2.vue';
-import AppSection3 from './components/Contents/HomePage/AppSection3.vue';
-import AppSection4 from './components/Contents/HomePage/AppSection4.vue';
-import AppSection5 from './components/Contents/HomePage/AppSection5.vue';
-import AppSection6 from './components/Contents/HomePage/AppSection6.vue';
-import AppSection7 from './components/Contents/HomePage/AppSection7.vue';
-import AppSection8 from './components/Contents/HomePage/AppSection8.vue';
+import AppSection1 from './components/Contents/LandingPage/AppSection1.vue';
+import AppSection2 from './components/Contents/LandingPage/AppSection2.vue';
+import AppSection3 from './components/Contents/LandingPage/AppSection3.vue';
+import AppSection4 from './components/Contents/LandingPage/AppSection4.vue';
+import AppSection5 from './components/Contents/LandingPage/AppSection5.vue';
+import AppSection6 from './components/Contents/LandingPage/AppSection6.vue';
+import AppSection7 from './components/Contents/LandingPage/AppSection7.vue';
+import AppSection8 from './components/Contents/LandingPage/AppSection8.vue';
 import AppFooter from './components/Footer/AppFooter.vue';
 
 export default {

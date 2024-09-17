@@ -3,12 +3,12 @@
         <div class="container-fluid">
             <div class="social-media-container d-flex justify-content-between flex-wrap p-md-2 mb-1 text-white">
                 <p class="heading fw-bold text-white m-0 mt-1">Get connected with us on social networks: </p>
-                <div class="d-flex gap-2 icon-container">
+                <div class="d-flex gap-2 gap-lg-3 mt-lg-1 icon-container">
                     <i v-for="(icon, index) in icons" :key="index" :class="icon.class"></i>
                 </div>
             </div>
             <hr class="text-white mt-0">
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center p-3">
                 <div class="col-12 col-md-6 footer-container">
                     <h6 class="website-heading fw-bold">Website Name</h6>
                     <hr class="style-line">
@@ -17,21 +17,21 @@
                 <div class="col-12 col-md-6 footer-container">
                     <h6 class="account-heading fw-bold">Account</h6>
                     <hr class="style-line">
-                    <p v-for="(account, index) in accounts" :key="index" class="account-link">
+                    <p v-for="(account, index) in accounts" :key="index" class="links">
                         <a :href="account.href">{{account.text}}</a>
                     </p>
                 </div>
                 <div class="col-12 col-md-6 footer-container">
                     <h6 class="support-links fw-bold">Support Links</h6>
                     <hr class="style-line">
-                    <p v-for="(support, index) in supports" :key="index" class="support-link">
+                    <p v-for="(support, index) in supports" :key="index" class="links">
                         <a :href="support.href">{{support.text}}</a>
                     </p>
                 </div>
                 <div class="col-12 col-md-6 footer-container">
                     <h6 class="contacts fw-bold">Contact</h6>
                     <hr class="style-line">
-                    <p v-for="(contact, index) in contacts" :key="index" class="contacts-link">
+                    <p v-for="(contact, index) in contacts" :key="index" class="links">
                         <a :href="contact.href">{{contact.text}}</a>
                     </p>
                 </div>
@@ -101,6 +101,10 @@ export default {
                 a {
                     color: #fff;
                     text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 } 
             }
         }
@@ -115,7 +119,51 @@ export default {
         div {
             div {
                 .footer-container {
-                    a {
+                    h6 {
+                        font-size: 0.9em;
+                    }
+
+                    .website-name {
+                        font-size: 0.7em;
+                    }
+
+                    .links {
+                        a {
+                            font-size: 0.7em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        .text {
+            font-size: 0.7em;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .footer-main-container {
+        div {
+            div {
+                .footer-container {
+                    h6 {
+                        font-size: 0.9em;
+                    }
+
+                    .website-name {
+                        font-size: 0.7em;
+                    }
+
+                    .links {
+                        a {
+                            font-size: 0.7em;
+                        }
+    
+                    }       
+
+                    i {
                         font-size: 0.7em;
                     }
                 }
@@ -128,4 +176,80 @@ export default {
         }
     }
 }
+
+@media (min-width: 768px) {
+    .footer-main-container {
+        div {
+            .social-media-container {
+                .heading {
+                    font-size: 1em;
+                }
+
+                i {
+                    font-size: 1em;
+                }
+            }
+            div {
+                .footer-container {
+                    a {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        .text {
+            font-size: 0.7em;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-main-container {
+        div {
+            .social-media-container {
+                .heading {
+                    font-size: 1.8em;
+                }
+
+                i {
+                    font-size: 1.8em;
+                }
+            }
+            div {
+                .footer-container {
+                    width: 300px;
+
+                    .style-line {
+                        width: 30%;
+                        margin-top: 0px;
+                        color: #fff;
+                    }
+
+                    h6 {
+                        font-size: 1.5em;
+                    }
+
+                    .website-name {
+                        font-size: 1.3em;
+                    }
+
+                    .links {
+                        a {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        .text {
+            font-size: 1em;
+        }
+    }
+}
+
+
 </style>
