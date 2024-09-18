@@ -3,14 +3,8 @@
     <Header title="My Task Management App" @toggle-sidebar="toggleSidebar" />
     <main class="py-3">
         <!-- <Sidebar :isVisible="isSidebarVisible" /> -->
-        <AppSection1 />
-        <AppSection2 />
-        <AppSection3 />
-        <AppSection4 />
-        <AppSection5 />
-        <AppSection6 />
-        <AppSection7 />
-        <AppSection8 />
+        <!-- <LandingSections /> -->
+        <router-view />
     </main>
     <footer>
       <AppFooter />
@@ -21,18 +15,11 @@
 <script>
 import Header from './components/Header/AppHeader.vue';
 // import Sidebar from './components/Sidebar/AppSidebar.vue';
-import AppSection1 from './components/Contents/LandingPage/AppSection1.vue';
-import AppSection2 from './components/Contents/LandingPage/AppSection2.vue';
-import AppSection3 from './components/Contents/LandingPage/AppSection3.vue';
-import AppSection4 from './components/Contents/LandingPage/AppSection4.vue';
-import AppSection5 from './components/Contents/LandingPage/AppSection5.vue';
-import AppSection6 from './components/Contents/LandingPage/AppSection6.vue';
-import AppSection7 from './components/Contents/LandingPage/AppSection7.vue';
-import AppSection8 from './components/Contents/LandingPage/AppSection8.vue';
+// import LandingSections from './components/Contents/LandingPage/LandingSections.vue';
 import AppFooter from './components/Footer/AppFooter.vue';
 
 export default {
-  components: { Header, AppSection1, AppSection2, AppSection3, AppSection4, AppSection5, AppSection6, AppSection7, AppSection8, AppFooter },
+  components: { Header, AppFooter },
   data() {
     return {
       isSidebarVisible: false,
