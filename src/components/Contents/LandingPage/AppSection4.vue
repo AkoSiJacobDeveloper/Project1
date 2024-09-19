@@ -46,8 +46,10 @@ export default {
         const submitForm = () => {
             submitted.value = true;
 
-            // Add any validation logic here if needed
+            // Validation logic here if needed
             console.log('Form Data:', formData.value);
+
+            localStorage.setItem('authToken', 'someRandomToken123');
 
             // After successful form submission, redirect to the Home page
             router.push({ name: 'HomePage' });

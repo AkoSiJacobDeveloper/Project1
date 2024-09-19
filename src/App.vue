@@ -1,25 +1,25 @@
 <template>
   <div>
-    <Header title="My Task Management App" @toggle-sidebar="toggleSidebar" />
+    <!-- <Header title="My Task Management App" @toggle-sidebar="toggleSidebar" /> -->
+    <AppHeader v-if="showHeader" />
     <main class="py-3">
         <!-- <Sidebar :isVisible="isSidebarVisible" /> -->
         <!-- <LandingSections /> -->
         <router-view />
     </main>
-    <footer>
-      <AppFooter />
-    </footer>
+    <AppFooter v-if="showFooter" />
   </div>
 </template>
 
 <script>
-import Header from './components/Header/AppHeader.vue';
+import AppHeader from './components/Header/AppHeader.vue';
+import AppFooter from './components/Footer/AppFooter.vue';
 // import Sidebar from './components/Sidebar/AppSidebar.vue';
 // import LandingSections from './components/Contents/LandingPage/LandingSections.vue';
-import AppFooter from './components/Footer/AppFooter.vue';
+
 
 export default {
-  components: { Header, AppFooter },
+  components: { AppHeader, AppFooter },
   data() {
     return {
       isSidebarVisible: false,
@@ -28,6 +28,17 @@ export default {
   methods: {
     toggleSidebar() {
       this.isSidebarVisible = !this.isSidebarVisible;
+    },
+  },
+  computed: {
+    showHeader() {
+      const routesWithHeader = ['Landing', 'HomePage', 'RestaurantPage']
+      return routesWithHeader.includes(this.$route.name);
+    },
+
+    showFooter() {
+      const routesWithFooter = ['Landing', 'HomePage', 'RestaurantPage']
+      return routesWithFooter.includes(this.$route.name);
     },
   },
 };
