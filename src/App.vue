@@ -1,9 +1,10 @@
 <template>
   <div>
     <!-- <Header title="My Task Management App" @toggle-sidebar="toggleSidebar" /> -->
+    <LandingHeader v-if="showLanding" />
     <AppHeader v-if="showHeader" />
     <main class="py-3">
-        <!-- <Sidebar :isVisible="isSidebarVisible" /> -->
+        <AppSidebar :isVisible="isSidebarVisible" v-if="showSidebar" />
         <!-- <LandingSections /> -->
         <router-view />
     </main>
@@ -12,14 +13,15 @@
 </template>
 
 <script>
-import AppHeader from './components/Header/AppHeader.vue';
 import AppFooter from './components/Footer/AppFooter.vue';
-// import Sidebar from './components/Sidebar/AppSidebar.vue';
+import AppSidebar from './components/Sidebar/AppSidebar.vue';
+import LandingHeader from './components/Header/LandingHeader.vue';
+import AppHeader from './components/Header/AppHeader.vue';
 // import LandingSections from './components/Contents/LandingPage/LandingSections.vue';
 
 
 export default {
-  components: { AppHeader, AppFooter },
+  components: { LandingHeader, AppFooter, AppSidebar, AppHeader },
   data() {
     return {
       isSidebarVisible: false,
@@ -31,9 +33,19 @@ export default {
     },
   },
   computed: {
+    showLanding() {
+      const routesWithLanding = ['Landing']
+      return routesWithLanding.includes(this.$route.name);
+    },
+
     showHeader() {
-      const routesWithHeader = ['Landing', 'HomePage', 'RestaurantPage']
-      return routesWithHeader.includes(this.$route.name);
+      const routesWithHeading = ['HomePage', 'RestaurantPage']
+      return routesWithHeading.includes(this.$route.name);
+    },
+
+    showSidebar() {
+      const routesWithRouter = ['HomePage', 'RestaurantPage']
+      return routesWithRouter.includes(this.$route.name);
     },
 
     showFooter() {

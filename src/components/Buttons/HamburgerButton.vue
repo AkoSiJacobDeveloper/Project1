@@ -1,5 +1,5 @@
 <template>
-    <button class="text-white"  @click="toggleSidebar">
+    <button v-if="showHamburger" class="text-white"  @click="toggleSidebar">
         ☰
     </button>
 </template>
@@ -10,6 +10,12 @@ export default {
         toggleSidebar() {
             this.$emit('toggle-sidebar');
         }
+    },
+    computed: {
+        showHamburger() {
+            const routesWithButton = ['HomePage', 'RestaurantPage']
+            return routesWithButton.includes(this.$route.name);
+        }
     }
 }
 </script>
@@ -18,7 +24,8 @@ export default {
 button {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: pointer;
+    padding: 0;
 }
 </style>
