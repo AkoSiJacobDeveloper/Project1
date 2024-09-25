@@ -1,17 +1,16 @@
 <template>
     <main>
-        <AppSection1 />
+        <HomeSection1 />
     </main>
 </template>
 
 <script>
-import AppSection1 from '../LandingPage/AppSection1.vue' // Just Visual Representation
+import HomeSection1 from '../HomePage/HomeSection1.vue';
 
 export default {
-    components: {AppSection1}
+    components: {HomeSection1}
 }
 </script>
 
 <style scoped>
-
 </style>

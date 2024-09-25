@@ -1,6 +1,6 @@
 <template>
     <button v-if="showHamburger" class="text-white"  @click="toggleSidebar">
-        ☰
+        <i class="bi bi-list"></i>
     </button>
 </template>
 
@@ -24,8 +24,11 @@ export default {
 button {
     background: none;
     border: none;
-    font-size: 1rem;
     color: pointer;
     padding: 0;
+
+    i {
+        font-size: 1.4rem;
+    }
 }
 </style>
