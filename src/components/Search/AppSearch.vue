@@ -1,13 +1,17 @@
 <template>
-    <div class="search-container p-md-2 p-lg-3 p-xl-4">
-        <div class="search"></div>
+    <div class="search-container d-flex gap-1">
+        <input class="w-100 p-2 rounded-2 border-0" type="text" placeholder="Search">
+        <SearchButton />
     </div>
 </template>
 
-<style lang="scss" scoped>
-.search-container {
-    width: 80%;
-    border-radius: 10px;
-    background-color: #fff;
+<script>
+import SearchButton from '../Buttons/SearchButton.vue';
+export default {
+    components: {SearchButton}
 }
+</script>
+
+<style lang="scss" scoped>
+
 </style>
