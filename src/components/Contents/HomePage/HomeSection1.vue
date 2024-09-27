@@ -5,6 +5,7 @@
             <div class="hero-container col-12 col-md-6 d-flex justify-content-center align-items-center flex-column p-4">
                 <h1 class="fw-bold text-center">Good to see you again! Let's get your next meal started.</h1>
                 <AppSearch />
+                <FilterButton />
             </div>
         </div>
     </section>
@@ -14,16 +15,17 @@
 
 <script>
 import AppSearch from '@/components/Search/AppSearch.vue';
+import FilterButton from '@/components/Buttons/FilterButton.vue';
 
 export default {
-   components: {AppSearch},
+   components: {AppSearch, FilterButton},
 
 }
 </script>
 
 <style lang="scss" scoped>
 .main-container {
-    height: 50vh;
+    height: 48vh;
     position: relative;
   
     .image-container {
@@ -31,7 +33,7 @@ export default {
       background-size: cover;
       background-position: center;
       position: absolute;
-      top: 0;
+      top: 0.6%;
       left: 0;
       right: 0;
       bottom: 0;
@@ -56,7 +58,7 @@ export default {
     .hero-container {
       position: relative;
       z-index: 3;
-      margin-top: 50px;
+      margin-top: 20px;
       color: white;
 
       h1 {
