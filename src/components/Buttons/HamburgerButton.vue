@@ -1,24 +1,25 @@
 <template>
-    <button v-if="showHamburger" class="text-white"  @click="toggleSidebar">
-        <i class="bi bi-list"></i>
+    <button v-if="showHamburger" class="text-white" @click="emitToggleSidebar">
+      <i class="bi bi-list"></i>
     </button>
-</template>
-
-<script>
-export default {
+  </template>
+  
+  <script>
+  export default {
     methods: {
-        toggleSidebar() {
-            this.$emit('toggle-sidebar');
-        }
+      emitToggleSidebar() {
+        this.$emit('toggle-sidebar'); // Emit the event
+      },
     },
     computed: {
-        showHamburger() {
-            const routesWithButton = ['HomePage', 'RestaurantPage']
-            return routesWithButton.includes(this.$route.name);
-        }
-    }
-}
-</script>
+      showHamburger() {
+        const routesWithButton = ['HomePage', 'RestaurantPage'];
+        return routesWithButton.includes(this.$route.name);
+      },
+    },
+  };
+  </script>
+  
 
 <style lang="scss" scoped>
 button {

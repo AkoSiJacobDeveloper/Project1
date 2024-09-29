@@ -32,6 +32,7 @@ export default {
 };
 </script>
 
+
 <style lang="scss" scoped>
 aside {
   position: fixed;
@@ -49,6 +50,7 @@ aside {
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 5;
 
   &.sidebar-visible {
     transform: translateX(0);
