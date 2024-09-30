@@ -1,17 +1,15 @@
 <template>
     <section class="main-container">
         <div class="image-container"></div>
-        <div class="container-fluid mt-5 d-flex justify-content-center align-items-center">
-            <div class="hero-container col-12 col-md-6 d-flex justify-content-center align-items-center flex-column p-4">
-                <h1 class="fw-bold text-center">Good to see you again! Let's get your next meal started.</h1>
+        <div class="container mt-5 d-flex justify-content-center align-items-center">
+            <div class="hero-container d-flex justify-content-center align-items-center flex-column p-4">
+                <p class="fw-bold text-center">Good to see you again! Let's get your next meal started.</p>
                 <AppSearch />
                 <FilterButton />
             </div>
         </div>
     </section>
 </template>
-
-
 
 <script>
 import AppSearch from '@/components/Search/AppSearch.vue';
@@ -25,8 +23,10 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-    height: 48vh;
-    position: relative;
+  margin-top: 40px;
+  height: 50vh;
+  position: relative;
+  box-sizing: border-box;
   
     .image-container {
       background-image: url('@/assets/Images/food pattern.jpg');
@@ -39,8 +39,6 @@ export default {
       bottom: 0;
       z-index: 1;
       filter: blur(2px); 
-      height: 50vh;
-      width: 100%;
       overflow: hidden;
     }
 
@@ -58,11 +56,11 @@ export default {
     .hero-container {
       position: relative;
       z-index: 3;
-      margin-top: 20px;
+      margin-top: 20%;
       color: white;
 
-      h1 {
-        font-size: 2.5em;
+      p {
+        font-size: 1.7em;
       }
     }
 }

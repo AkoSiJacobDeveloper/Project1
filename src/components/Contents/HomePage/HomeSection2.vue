@@ -1,8 +1,8 @@
 <template>
     <section class="main-container">
-        <div class="container">
+        <div class="container-fluid">
             <h1 class="heading text-center my-5 fw-bold"> {{ heading }} </h1>
-            <div class="row d-flex justify-content-center align-items-center gap-2">
+            <div class="row d-flex justify-content-center align-items-center gap-2 mb-4">
                 <div v-for="(dish, index) in dishes" :key="index" class="food-container m-2 col-12 col-md-6">
                     <div class="image-container d-flex justify-content-center align-items-center">
                         <img class="dish-image" :src="dish.image" :alt="dish.title" />
@@ -30,15 +30,17 @@
                     </div>
                 </div>
             </div>
+            <ViewMoreBtn />
         </div>
     </section>
 </template>
 
 <script>
 import OrderButton from '@/components/Buttons/OrderButton.vue';
+import ViewMoreBtn from '@/components/Buttons/ViewMoreBtn.vue';
 
 export default {
-    components: {OrderButton},
+    components: {OrderButton, ViewMoreBtn},
     data() {
         return {
             dishes: [
@@ -54,11 +56,12 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-    margin-top: 60px;
+    margin-top: 70px;
+    box-sizing: border-box;
 
     .food-container {
         width: 21.875rem;
-        height: 25rem;
+        height: 400px;
         .image-container {
             width: 100%;
             .dish-image {
@@ -71,6 +74,7 @@ export default {
             }
         }
         .details-container {
+            height: auto;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -82,7 +86,6 @@ export default {
                 border-left: 1px solid rgba(0, 0, 0, 0.06)
             }
         }
-        
     }
 }
 </style>
