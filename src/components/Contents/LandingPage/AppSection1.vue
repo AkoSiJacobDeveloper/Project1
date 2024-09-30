@@ -23,13 +23,13 @@ import { ref } from 'vue';
 
 export default {
   directives: {
-    intersect: require('@/directives/intersectionObserver').default, // import your custom directive
+    intersect: require('@/directives/intersectionObserver').default,
   },
   setup() {
-    const isVisible = ref(false); // state to track visibility
+    const isVisible = ref(false); 
 
     const handleIntersect = (entry) => {
-      isVisible.value = entry.isIntersecting; // set visibility state when the section is visible
+      isVisible.value = entry.isIntersecting; 
     };
 
     return {

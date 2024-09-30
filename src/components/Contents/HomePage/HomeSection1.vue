@@ -66,7 +66,24 @@ export default {
       }
     }
 }
-   
+  
+@media (min-width: 1024px) {
+  .main-container {
+    height: 80vh;
+
+    .image-container {
+      height: 80vh;
+    }
+
+    .hero-container {
+      margin-top: 10rem;
+
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  } 
+}
     
 </style>
 

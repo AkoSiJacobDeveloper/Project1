@@ -1,6 +1,6 @@
 <template>
-    <div class="search-container d-flex gap-1">
-        <input class="w-100 p-2 rounded-2 border-0" type="text" placeholder="Search">
+    <div class="search-container d-flex gap-1 w-100">
+        <input class="search w-100 p-2 p-xl-3 rounded-2 border-0" type="text" placeholder="What are you craving today?">
         <SearchButton />
     </div>
 </template>
