@@ -210,16 +210,15 @@ export default {
         div {
             .social-media-container {
                 .heading {
-                    font-size: 1.8em;
+                    font-size: 1em;
                 }
 
                 i {
-                    font-size: 1.8em;
+                    font-size: 1em;
                 }
             }
             div {
                 .footer-container {
-                    width: 300px;
 
                     .style-line {
                         width: 30%;
@@ -228,16 +227,16 @@ export default {
                     }
 
                     h6 {
-                        font-size: 1.5em;
+                        font-size: 1em;
                     }
 
                     .website-name {
-                        font-size: 1.3em;
+                        font-size: 1em;
                     }
 
                     .links {
                         a {
-                            font-size: 1.3em;
+                            font-size: 1em;
                         }
                     }
                 }
