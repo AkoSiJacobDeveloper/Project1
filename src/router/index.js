@@ -12,7 +12,7 @@ const routes = [
         path: '/home',
         name: 'HomePage',
         component: HomePage,
-        meta: { requiresAuth: true }, // Router guard, it requires to login successfully before directed to the HomePage, so it basically guard the home page so that users cant directly access it without logging in nor sign in
+        meta: { requiresAuth: true },
     }
 ];
 
@@ -21,7 +21,7 @@ const router = createRouter({
     routes
 });
 
-// Navugation guard for authentication
+
 router.beforeEach((to, from, next) => {
     const isAuthenticated = localStorage.getItem('authToken');
     if (to.matched.some(record => record.meta.requiresAuth) && !isAuthenticated) {
